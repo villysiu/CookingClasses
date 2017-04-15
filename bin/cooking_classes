@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative  '../lib/CookingClasses'
+
+CookingClasses::CLI.new.say_SurLaTable
