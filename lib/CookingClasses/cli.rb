@@ -24,14 +24,23 @@ class CookingClasses::CLI
         list_lessons
       when "exit"
         puts "good bye"
-      #when /\d+/
+
       when *lesson_numbers
-        #display_details(input.to_i)
-        puts input
+        display_lesson_details(input.to_i)
+
       else
         puts "This is not a valid input. Try again."
       end
     end
   end
 
+  def display_lesson_details(i)
+    puts "******* #{i}. ************"
+    puts "Description:"
+
+    puts ""
+    puts "Menu"
+
+    puts ""
+  end
 end
