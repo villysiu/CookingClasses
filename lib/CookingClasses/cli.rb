@@ -12,8 +12,8 @@ class CookingClasses::CLI
 
   def display_user_menu
     lesson_numbers = []
-    size = 12
-    1.upto(size) {|i| lesson_numbers << i.to_s}
+    #size = 12
+    1.upto(CookingClasses::Lesson.all.size) {|i| lesson_numbers << i.to_s}
 
     input = nil
     while input != "exit"
