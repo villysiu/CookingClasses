@@ -11,6 +11,10 @@ class CookingClasses::CLI
   end
 
   def display_user_menu
+    lesson_numbers = []
+    size = 12
+    1.upto(size) {|i| lesson_numbers << i.to_s}
+
     input = nil
     while input != "exit"
       puts "Please type [lesson number] you'd like more information, or [list] to see all the lessons, or [exti] to exit the program"
@@ -20,7 +24,8 @@ class CookingClasses::CLI
         list_lessons
       when "exit"
         puts "good bye"
-      when input.to_i.between?(1, 12)
+      #when /\d+/
+      when *lesson_numbers
         #display_details(input.to_i)
         puts input
       else
@@ -28,4 +33,5 @@ class CookingClasses::CLI
       end
     end
   end
+
 end
