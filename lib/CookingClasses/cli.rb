@@ -8,11 +8,12 @@ class CookingClasses::CLI
     puts "***************** Sur La Table **********************"
     puts "******* Customer Favorite Cooking Classes ***********"
     puts ""
+    CookingClasses::Lesson.all.each_with_index {|lesson, i| puts "[#{i+1}] #{lesson.name}"}
+
   end
 
   def display_user_menu
     lesson_numbers = []
-    #size = 12
     1.upto(CookingClasses::Lesson.all.size) {|i| lesson_numbers << i.to_s}
 
     input = nil
@@ -24,10 +25,8 @@ class CookingClasses::CLI
         list_lessons
       when "exit"
         puts "good bye"
-
       when *lesson_numbers
         display_lesson_details(input.to_i)
-
       else
         puts "This is not a valid input. Try again."
       end

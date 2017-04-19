@@ -2,4 +2,4 @@
 
 require_relative  '../lib/CookingClasses'
 
-CookingClasses::CLI.new.say_SurLaTable
+CookingClasses::CLI.new.call
