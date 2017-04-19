@@ -29,13 +29,19 @@ class CookingClasses::Lesson
   end
   
   def description
-    doc = Nokogiri::HTML(open(@@base_url + self.url))
-    @description = doc.css("div.boxsides").children[6].text
+    if @description.nil?
+      doc = Nokogiri::HTML(open(@@base_url + self.url))
+      @description = doc.css("div.boxsides").children[6].text
+    end
+    @description
   end
 
   def menu
-    doc = Nokogiri::HTML(open(@@base_url + self.url))
-    @menu = doc.css("div.boxsides").children[2].text
+    if @menu.nil?
+      doc = Nokogiri::HTML(open(@@base_url + self.url))
+      @menu = doc.css("div.boxsides").children[2].text
+    end
+    @menu
   end
 
 
