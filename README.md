@@ -1,28 +1,15 @@
 # CookingClasses
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CookingClasses`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Gem provides a CLI to view the most customer favorite cooking classes at Sur La Table website. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'CookingClasses'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install CookingClasses
+You can install this gem via 
+`gem install CookingClasses`
 
 ## Usage
 
-TODO: Write usage instructions here
+Run: `cooking_classes` after installing the gem.
 
 ## Development
 
