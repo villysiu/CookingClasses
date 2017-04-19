@@ -35,12 +35,13 @@ class CookingClasses::CLI
   end
 
   def display_lesson_details(i)
-    puts "******* #{i}. ************"
+    lesson = CookingClasses::Lesson.all[i-1]
+    puts "**************** #{i}. #{lesson.name} ********************"
     puts "Description:"
-
+    puts lesson.description
     puts ""
     puts "Menu"
-
+    puts lesson.menu
     puts ""
   end
 end
