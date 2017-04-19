@@ -27,6 +27,16 @@ class CookingClasses::Lesson
     end
     @@all
   end
+  
+  def description
+    doc = Nokogiri::HTML(open(@@base_url + self.url))
+    @description = doc.css("div.boxsides").children[6].text
+  end
+
+  def menu
+    doc = Nokogiri::HTML(open(@@base_url + self.url))
+    @menu = doc.css("div.boxsides").children[2].text
+  end
 
 
 end
